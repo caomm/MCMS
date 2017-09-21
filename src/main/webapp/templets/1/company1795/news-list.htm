@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<body>
+		{ms:include filename=header.htm/}
+		{ms:include filename=menu-left.htm/}
+		<!-- 面包屑导航开始 -->
+		<div class="container ">
+			<nav class="sub_menu">
+				<ol class="breadcrumb"><span class="glyphicon glyphicon-list"></span>
+					<li>
+						<a href="{ms:global.host/}">网站首页</a>
+					</li>
+					<li>
+						<a title="{ms:field.typetitle/}" href="{ms:field.typelink/}">{ms:field.typetitle/}</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<!--/sub_menu-->
+		<!-- 面包屑导航结束 -->
+		<div class="box2">
+			<div class="container">
+				<div class="row">
+					{ms:arclist typeid=59 size=6 ispaging=true}
+					<div class="col-sm-12">
+						<div class="xinwen">
+							<div class="row">
+								<div class="col-sm-3 col-lg-2 col-md-push-9 col-lg-push-10">
+									<a class="img-auto" title="[field.title/]" href="[field.link/]" target="_blank"><img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" style="width:165px;height:107px;"/></a>
+								</div>
+								<div class="col-sm-9 col-lg-10 col-md-pull-3 col-lg-pull-2">
+									<a href="">
+										<div class="xinwen-date">
+											<h3>[field.date fmt=yyyy-MM/]</h3>
+											<span><i></i></span>
+										</div>
+										<div class="xinwen-text">
+											<h4><a title="[field.title/]" href="[field.link/]" target="_blank" >[field.title/]</a></h4>
+											<p>[field.descrip/]</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					{/ms:arclist} 
+				</div>
+				<!-- 内容列表分页开始 -->
+				<nav>
+					<ul class="pagination">
+						<li><a href="{ms:page.index/}">首页</a></li>  
+						<li><a href="{ms:page.pre/}">上一页</a></li>  
+						<li><a href="{ms:page.next/}">下一页</a></li>  
+						<li><a href="{ms:page.last/}">末页</a></li>  
+						<li><span>共{ms:page.total/}页</span></li> 
+					</ul>
+				</nav>
+				<!-- 内容列表分页结束 -->
+			</div>
+		</div>
+		{ms:include filename=footer.htm/}
+	</body>
+</html>

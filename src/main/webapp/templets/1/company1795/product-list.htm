@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<body>
+		{ms:include filename=header.htm/} 
+		{ms:include filename=menu-left.htm/}
+		<!-- 面包屑导航开始 -->
+		<div class="container ">
+			<nav class="sub_menu">
+				<ol class="breadcrumb"><span class="glyphicon glyphicon-list"></span>
+					<li>
+						<a href="{ms:global.host/}">网站首页</a>
+					</li>
+					<li>
+						<a title="{ms:field.typetitle/}" href="{ms:field.typelink/}">{ms:field.typetitle/}</a>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<!--/sub_menu-->
+		<!-- 面包屑导航结束 -->
+		<div class="box2">
+			<div class="title10 wow fadeInUp">
+				<h4>产品中心</h4>
+				<p>Architecture</p>
+			</div>
+			<div class="subtitle10 clearfix wow fadeInUp">
+				<ul>
+					{ms:channel typeid=106}
+					<li>
+						<a href="[field.typelink/]">[field.typetitle/]</a>
+					</li>
+				 	{/ms:channel}
+				</ul>
+			</div>
+			<div class="container container-cp">
+				<ul id="pubu_box">
+					{ms:arclist size=6 ispaging=true}
+					<li>
+						<div class="pubu-item wow fadeInUp">
+							<a title="[field.title/]" href="[field.link/]" target="_blank">
+								<div class="pubu-img img-auto">
+									<img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" style="width:436px;height:286px;"/>
+								</div>
+								<div class="pubu-text">
+									<span></span>
+									<h4>[field.title/]</h4>
+									<p>[field.descrip/]</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					{/ms:arclist}
+				</ul>
+				<script src="{ms:globalskin.url/}/js/pubuliu.js"></script>
+				<script>
+					$(document).ready(function() {
+						$('#pubu_box').masonry();
+					});
+				</script>
+			</div>
+			<div class="container">
+				<!-- 内容列表分页开始 -->
+				<nav>
+					<ul class="pagination">
+						<li><a href="{ms:page.index/}">首页</a></li>  
+						<li><a href="{ms:page.pre/}">上一页</a></li>  
+						<li><a href="{ms:page.next/}">下一页</a></li>  
+						<li><a href="{ms:page.last/}">末页</a></li>  
+						<li><span>共{ms:page.total/}页</span></li> 
+					</ul>
+				</nav>
+				<!-- 内容列表分页结束 -->
+			</div>
+		</div>
+ 		{ms:include filename=footer.htm/}
+	</body>
+</html>

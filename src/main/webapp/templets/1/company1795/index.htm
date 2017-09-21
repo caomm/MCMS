@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		{ms:include filename=headFile.htm/}
+	</head>
+	<body>
+		{ms:include filename=header.htm/}
+		<div class="banner-box">
+			<div class="banner">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<a href="#"><img src="{ms:globalskin.url/}/images/1.jpg" style="width:100%;"/></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="{ms:globalskin.url/}/images/2.jpg" style="width:100%;"/></a>
+						</div>
+						<div class="item">
+							<a href="#"><img src="{ms:globalskin.url/}/images/3.jpg" style="width:100%;"/></a>
+						</div>
+					</div>
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<!-- /banner -->
+		</div>
+		<!-- /banner-box -->
+		<div class="index">
+			<script src="{ms:globalskin.url/}/js/stellar.js"></script>
+			<script>
+				$(function() {
+					$.stellar({});
+				});
+			</script>
+			<div class="section1">
+				<div class="container">
+					<div class="title10 wow fadeInUp">
+						<h4><a href="{ms:global.url/}/106/index.html" title="" target="_blank">产品中心</a></h4>
+						<p>Product</p>
+					</div>
+				</div>
+				<div class="s1">
+					<div class="container">
+						<ul id="pubu_box">
+							{ms:arclist typeid=106 size=3}
+							<li class="pubu" style="float: left;">
+								<div class="s1-tiem wow fadeInUp">
+									<a title="[field.title/]" href="[field.link/]" target="_blank">
+										<div class="s1-img img-auto">
+											<img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" style="width:303px;height:200px;" />
+										</div>
+										<div class="s1-text">
+											<span></span>
+											<h4><font style="color:;">[field.title/]</font></h4>
+											<p>field.descrip/]</p>
+										</div>
+									</a>
+								</div>
+							</li>
+							{/ms:arclist}
+						</ul>
+						<script src="{ms:globalskin.url/}/js/pubuliu.js"></script>
+						<script>
+							$(document).ready(function() {
+								$('#pubu_box').masonry();
+							});
+						</script>
+					</div>
+				</div>
+				<div class="index-more wow fadeInUp">
+					<a href="{ms:global.url/}/106/index.html" title="" target="_blank"><i></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="section2 bg1" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="title10 wow fadeInUp">
+					<h4><a href="{ms:global.url/}/53/index.html" title="" target="_blank">关于我们</a></h4>
+					<p>about_us</p>
+				</div>
+				<div class=" s2-1">
+					<div class="col-sm-6 wow fadeInUp">
+						<div class="s2-img"><img src="{ms:globalskin.url/}/images/s2-left.png" width="158" height="11" alt="" /></div>
+					</div>
+					<div class="col-sm-6 s2-text wow fadeInUp">
+						<p>建筑设计研究院有限公司（原名上海市民用建筑设计院）成立于&nbsp;1953年，是一家具有工程咨询、建筑工程设计、城市规划、建筑智能化及系统工程设计资质的综合性建筑设计院，也是中国乃至世界最具规模的设计公司之一，&nbsp;被评为建筑设计行业“高新技术企业”，通过国际ISO9001质量保证体系认证，在国内外享有较高的知名度。累计完成&nbsp;2万多项工程的设计和咨询，作品遍及全国&nbsp;31个省市自治区及全球&nbsp;20余个国家和地区，其中700多项工程设计、科研项目、规范标准获国家、建设部以及上海市优秀设计和科技进步奖。60年的积淀与发展将上海院的历史与国&nbsp;家、城市发展的</p>
+						<div class="index-more wow fadeInUp">
+							<a title="关于" href="{ms:global.url/}/53/index.html" target="_blank"><i></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section3">
+			<div class="container">
+				<div class="title10 wow fadeInUp">
+					<h4><a href="{ms:global.url/}/59/index.html" title="" target="_blank">新闻中心</a></h4>
+					<p>news</p>
+				</div>
+			</div>
+			<div class="s3-box">
+				<div class="container">
+					<div class="row">
+						{ms:arclist typeid=59 size=3}
+						<div class="col-sm-4">
+							<div class="s3-item wow fadeInUp">
+								<a title="[field.title/]" href="[field.link/]" target="_blank">
+									<h4><font style="color:;">[field.title/]</font></h4>
+									<h5>[field.date fmt=yyyy-MM/]<small>[field.date fmt=dd/]</small></h5>
+									<p>[field.descrip/]</p>
+									<span></span>
+								</a>
+							</div>
+						</div>
+						{/ms:arclist}
+					</div>
+				</div>
+				<div class="index-more wow fadeInUp">
+					<a href="{ms:global.url/}/59/index.html" title="" target="_blank"><i></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="seciton4">
+			<div class="container">
+				<div class="s4-1"></div>
+				<script src="{ms:globalskin.url/}/js/owl.carousel.min.js"></script>
+				<script>
+					$(document).ready(function() {
+						$("#owl-demo2").owlCarousel({
+							singleItem: true,
+							lazyLoad: true,
+							navigation: true
+						});
+
+					});
+				</script>
+				<div id="owl-demo2">
+					{ms:arclist typeid=115 size=3}
+					<div class="s4-item wow fadeInUp">
+						<a title="[field.title/]" href="[field.link/]" target="_blank">
+							<div class="s4-img">
+								<img alt="[field.title/]" src="{ms:global.host/}[field.litpic/]" style="width:200px;height:178px;" />
+							</div>
+							<div class="s4-text">
+								<h4><font style="color:;">[field.title/]</font></h4> [field.content/]
+							</div>
+						</a>
+					</div>
+					{/ms:arclist}
+				</div>
+				<!-- /#owl-demo2 -->
+			</div>
+		</div>
+		<div class="section5">
+			<div class="container wow fadeInUp">
+				<script src="{ms:globalskin.url/}/js/owl.carousel.min.js"></script>
+				<script>
+					$(document).ready(function() {
+						$("#owl-demo4").owlCarousel({
+							items: 6,
+							lazyLoad: true,
+							navigation: true
+						});
+
+					});
+				</script>
+				<div id="owl-demo4">
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴一" href="#" target="_blank"><img alt="合作伙伴一" src="{ms:globalskin.url/}/images/14901104151945.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴二" href="#" target="_blank"><img alt="合作伙伴二" src="{ms:globalskin.url/}/images/14901104006549.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴三" href="#" target="_blank"><img alt="合作伙伴三" src="{ms:globalskin.url/}/images/14901103853585.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴四" href="#" target="_blank"><img alt="合作伙伴四" src="{ms:globalskin.url/}/images/14901103726733.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴五" href="#" target="_blank"><img alt="合作伙伴五" src="{ms:globalskin.url/}/images/14901103571441.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴六" href="#" target="_blank"><img alt="合作伙伴六" src="{ms:globalskin.url/}/images/14901103426859.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴七" href="#" target="_blank"><img alt="合作伙伴七" src="{ms:globalskin.url/}/images/14901103267403.png" style="width:130px;height:52px;" /></a>
+					</div>
+					<div class="s5-item">
+						<a class="img-auto" title="合作伙伴八" href="#" target="_blank"><img alt="合作伙伴八" src="{ms:globalskin.url/}/images/14901103127386.png" style="width:130px;height:52px;" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section7">
+			<div class="container">
+				<form method="post" action="#" name="form1">
+					<div class="row s7-row">
+						<div class="col-sm-4 wow fadeInUp">
+							<div class="form-group">
+								<input type="text" name="my_xingming" id="my_xingming" class="form-control" placeholder="名字">
+							</div>
+						</div>
+						<div class="col-sm-4 wow fadeInUp">
+							<div class="form-group">
+								<input type="text" name="my_youxiang" id="my_youxiang" class="form-control" placeholder="邮箱">
+							</div>
+						</div>
+						<div class="col-sm-4 wow fadeInUp">
+							<div class="form-group">
+								<input type="text" name="my_dianhua" id="my_dianhua" class="form-control" placeholder="电话">
+							</div>
+						</div>
+					</div>
+					<div class="row s7-row">
+						<div class="col-sm-12 wow fadeInUp">
+							<div class="form-group">
+								<textarea name="my_neirong" id="my_neirong" class="form-control" rows="6">内容...</textarea>
+							</div>
+						</div>
+					</div>
+					<div class="row s7-row">
+						<div class="col-sm-4 wow fadeInUp">
+						</div>
+						<div class="col-sm-4 wow fadeInUp">
+						</div>
+						<div class="col-sm-4 wow fadeInUp ">
+							<input type="submit" name="button" class="btn s7-btn">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+		<!-- /index -->
+		<div class="foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2 foot1">
+						<a href="">
+							<h3>联系</h3>
+							<p>Contact</p>
+						</a>
+					</div>
+					<div class="col-sm-3 foot2">
+						<h4>关注</h4>
+						<ul class="clearfix">
+							<a href="#"><span class="fa fa-weibo"></span></a>
+							<a rel="nofollow" href="#" target="_blank"><span class="fa fa-qq"></span></a>
+							<a id="weixin"><span class="fa fa-weixin"></span></a>
+						</ul>
+					</div>
+					<div class="col-sm-7 foot3">
+						<h4>顶尖建站设计响应式网站模板</h4>
+						<ul class="row">
+							<li class="col-sm-6">电 话：8888-88888888</li>
+							<li class="col-sm-6">地 址：建站设计有限公司</li>
+							<li class="col-sm-6">手 机：8888-88888888</li>
+							<li class="col-sm-6">邮 编：136000</li>
+							<li class="col-sm-6">邮 箱：admin@admin.com</li>
+							<li class="col-sm-6">传 真：8888-88888888</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		{ms:include filename=footer.htm/}
+	</body>
+
+</html>
